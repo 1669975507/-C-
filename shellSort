@@ -1,0 +1,17 @@
+void shellSort(int arr[], int n) {
+	for (int d = n/2; d >=1; d=d/2) { 
+		for (int i = d; i <= n; ++i) {
+			int key = arr[i];
+			int j;
+			if (arr[i - d] > key) {
+
+				for (j = i - d; j >=0&&key<arr[j]; j = j - d) {
+					arr[j + d] = arr[j];
+				}
+				arr[j + d] = key;
+			}
+		}
+
+
+	}
+}
